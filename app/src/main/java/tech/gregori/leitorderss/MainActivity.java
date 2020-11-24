@@ -47,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
             ParseApplications parser = new ParseApplications();
             parser.parse(s);
 
-            FeedAdapter feedAdapter = new FeedAdapter(
-                    MainActivity.this, R.layout.list_records, parser.getApplications()
+//            FeedAdapter feedAdapter = new FeedAdapter(
+//                    MainActivity.this, R.layout.list_records, parser.getApplications()
+//            );
+            FeedImageAdapter feedAdapter = new FeedImageAdapter(
+                    MainActivity.this, R.layout.list_record_with_image, parser.getApplications()
             );
 
             rssListView.setAdapter(feedAdapter);
